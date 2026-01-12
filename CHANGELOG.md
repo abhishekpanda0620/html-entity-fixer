@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/abhishekpanda0620/html-entity-fixer/compare/v1.0.0...v1.1.0) (2026-01-12)
+
+
+### Features
+
+* add npm provenance for supply chain security ([d6b363c](https://github.com/abhishekpanda0620/html-entity-fixer/commit/d6b363c91edb0ce9f4aa1d8e97920718c544e844))
+
 # 1.0.0 (2026-01-12)
 
 

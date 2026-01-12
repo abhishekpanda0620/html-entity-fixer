@@ -1,6 +1,6 @@
 {
   "name": "html-entity-fixer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Fast, safe CLI tool for escaping unescaped HTML entities in modern web projects",
   "type": "module",
   "main": "dist/index.js",
