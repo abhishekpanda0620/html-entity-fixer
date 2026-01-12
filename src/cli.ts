@@ -16,7 +16,7 @@ const { version } = require('../package.json') as { version: string };
 const program = new Command();
 
 program
-  .name('html-fixer')
+  .name('html-entity-fixer')
   .description('Fast, safe CLI tool for escaping unescaped HTML entities')
   .version(version)
   .argument('<patterns...>', 'Glob patterns for files to process (e.g., "src/**/*.jsx")')

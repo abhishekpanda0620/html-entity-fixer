@@ -1,7 +1,7 @@
-# html-fixer
+# html-entity-fixer
 
-[![npm version](https://img.shields.io/npm/v/html-fixer.svg)](https://www.npmjs.com/package/html-fixer)
-[![CI](https://github.com/abhishekpanda0620/html-fixer/actions/workflows/ci.yml/badge.svg)](https://github.com/abhishekpanda0620/html-fixer/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/html-entity-fixer.svg)](https://www.npmjs.com/package/html-entity-fixer)
+[![CI](https://github.com/abhishekpanda0620/html-entity-fixer/actions/workflows/ci.yml/badge.svg)](https://github.com/abhishekpanda0620/html-entity-fixer/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > 🔧 Fast, safe CLI tool for escaping unescaped HTML entities in modern web projects
@@ -19,29 +19,29 @@
 
 ```bash
 # Global installation
-npm install -g html-fixer
+npm install -g html-entity-fixer
 
 # Local installation (recommended)
-npm install --save-dev html-fixer
+npm install --save-dev html-entity-fixer
 ```
 
 ## 🚀 Quick Start
 
 ```bash
 # Fix all JSX files in src directory
-html-fixer "src/**/*.jsx"
+html-entity-fixer "src/**/*.jsx"
 
 # Preview changes without modifying files
-html-fixer "src/**/*.{jsx,tsx}" --dry-run
+html-entity-fixer "src/**/*.{jsx,tsx}" --dry-run
 
 # Use extended mode for additional entities
-html-fixer "src/**/*.html" --mode extended
+html-entity-fixer "src/**/*.html" --mode extended
 ```
 
 ## 📖 Usage
 
 ```bash
-html-fixer <patterns...> [options]
+html-entity-fixer <patterns...> [options]
 ```
 
 ### Arguments
@@ -91,7 +91,7 @@ Includes essential entities plus:
 ## 🔧 Programmatic API
 
 ```typescript
-import { escapeHtml, processFiles } from 'html-fixer';
+import { escapeHtml, processFiles } from 'html-entity-fixer';
 
 // Escape a string
 const result = escapeHtml("It's a <test>", 'essential');
@@ -113,7 +113,7 @@ Use `--dry-run` in your CI pipeline to fail builds with unescaped entities:
 ```yaml
 # .github/workflows/lint.yml
 - name: Check HTML entities
-  run: npx html-fixer "src/**/*.{jsx,tsx}" --dry-run
+  run: npx html-entity-fixer "src/**/*.{jsx,tsx}" --dry-run
 ```
 
 The command exits with code `1` if changes would be made.
