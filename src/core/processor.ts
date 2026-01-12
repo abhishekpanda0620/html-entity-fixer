@@ -45,10 +45,7 @@ export interface ProcessSummary {
 /**
  * Process a single file
  */
-export async function processFile(
-  filePath: string,
-  options: ProcessOptions
-): Promise<FileResult> {
+export async function processFile(filePath: string, options: ProcessOptions): Promise<FileResult> {
   const encoding = options.encoding ?? 'utf-8';
 
   try {
