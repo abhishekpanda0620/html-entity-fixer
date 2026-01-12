@@ -4,16 +4,21 @@
  */
 
 import { Command } from 'commander';
+import { createRequire } from 'module';
 import { processFiles } from './core/processor.js';
 import { Logger } from './utils/logger.js';
 import { EscapeMode } from './core/entities.js';
+
+// Read version from package.json (kept in sync by semantic-release)
+const require = createRequire(import.meta.url);
+const { version } = require('../package.json') as { version: string };
 
 const program = new Command();
 
 program
   .name('html-fixer')
   .description('Fast, safe CLI tool for escaping unescaped HTML entities')
-  .version('0.0.0-development')
+  .version(version)
   .argument('<patterns...>', 'Glob patterns for files to process (e.g., "src/**/*.jsx")')
   .option('-d, --dry-run', 'Preview changes without modifying files', false)
   .option('-m, --mode <mode>', 'Escaping mode: essential or extended', 'essential')
