@@ -10,12 +10,14 @@
 
 ## ✨ Features
 
+- **🧠 Smart Tag Detection** - Distinguishes between valid HTML/XML tags and text
+- **⚛️ Component Support** - Works with React components, custom elements, and XML
 - **🚀 Fast** - Optimized for large codebases and monorepos
 - **🔒 Safe** - Never double-escapes already-escaped entities
 - **📁 Glob support** - Process multiple files with patterns like `src/**/*.jsx`
 - **👀 Dry-run mode** - Preview changes before applying
 - **🎛️ Configurable** - Essential or extended escaping modes
-- **📦 Lightweight** - Only ~15KB published, minimal dependencies
+- **📦 Lightweight** - ~15KB package size, minimal dependencies
 
 ## 📦 Installation
 
