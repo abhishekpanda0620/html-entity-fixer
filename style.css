@@ -1,0 +1,230 @@
+:root {
+    --bg-color: #0f172a;
+    --text-color: #e2e8f0;
+    --accent-color: #38bdf8;
+    --secondary-color: #818cf8;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+header {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Markdown Content Styles */
+#content {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 3rem 0;
+}
+
+#content h1,
+#content h2,
+#content h3 {
+    margin-top: 2rem;
+    color: var(--text-color);
+    border-bottom: none;
+}
+
+#content h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+
+#content h2 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 0.5rem;
+}
+
+#content h3 {
+    font-size: 1.4rem;
+}
+
+#content p {
+    margin-bottom: 1rem;
+    color: #cbd5e1;
+}
+
+#content ul,
+#content ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    color: #cbd5e1;
+}
+
+#content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Code Blocks */
+pre {
+    background: #0f172a !important;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border: 1px solid #334155;
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+
+p code,
+li code {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #94a3b8;
+    background: rgba(56, 189, 248, 0.05);
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border: 1px solid #334155;
+    text-align: left;
+}
+
+th {
+    background: rgba(30, 41, 59, 0.8);
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* Links */
+#content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent-color);
+    transition: opacity 0.2s;
+}
+
+#content a:hover {
+    opacity: 0.8;
+}
+
+/* Images (Badges) */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.loading {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.2rem;
+    color: #64748b;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    color: #64748b;
+    border-top: 1px solid #1e293b;
+    margin-top: 4rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
