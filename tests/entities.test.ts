@@ -38,7 +38,14 @@ describe('Entity Maps', () => {
       }
     });
 
-    const extendedChars = ['©', '®', '™', '—', '–', '\u00A0'];
+    const extendedChars = [
+      '©', '®', '™', 
+      '—', '–', '\u00A0', '…', '§', '¶', '°',
+      '€', '£', '¥', '¢', 
+      '½', '¼', '¾',
+      '×', '÷', '±', '∞', '≠', '≈', '≤', '≥',
+      '←', '→', '↑', '↓'
+    ];
 
     it.each(extendedChars)('should contain extended char "%s"', (char) => {
       expect(EXTENDED_ENTITIES.has(char)).toBe(true);

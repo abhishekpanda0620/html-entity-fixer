@@ -83,14 +83,14 @@ Escapes the 5 critical HTML entities:
 
 Includes essential entities plus:
 
-| Character | Entity |
-|-----------|--------|
-| `©` | `&copy;` |
-| `®` | `&reg;` |
-| `™` | `&trade;` |
-| `—` | `&mdash;` |
-| `–` | `&ndash;` |
-| ` ` (nbsp) | `&nbsp;` |
+Includes essential entities plus common content writing symbols:
+
+- **Typography**: `©` (&copy;), `®` (&reg;), `™` (&trade;), `—` (&mdash;), `–` (&ndash;), `…` (&hellip;), `§` (&sect;), `¶` (&para;), `°` (&deg;)
+- **Currency**: `€` (&euro;), `£` (&pound;), `¥` (&yen;), `¢` (&cent;)
+- **Fractions**: `½` (&frac12;), `¼` (&frac14;), `¾` (&frac34;)
+- **Math**: `×` (&times;), `÷` (&divide;), `±` (&plusmn;), `∞` (&infin;), `≠` (&ne;), `≈` (&asymp;), `≤` (&le;), `≥` (&ge;)
+- **Arrows**: `←` (&larr;), `→` (&rarr;), `↑` (&uarr;), `↓` (&darr;)
+- **Spacing**: Non-breaking space (&nbsp;)
 
 ## 🔧 Programmatic API
 

@@ -27,12 +27,37 @@ export const EXTENDED_ENTITIES: ReadonlyMap<string, string> = new Map([
   ['©', '&copy;'],
   ['®', '&reg;'],
   ['™', '&trade;'],
+  // Typography
   ['—', '&mdash;'],
   ['–', '&ndash;'],
   ['\u00A0', '&nbsp;'], // Non-breaking space
+  ['…', '&hellip;'],
+  ['§', '&sect;'],
+  ['¶', '&para;'],
+  ['°', '&deg;'],
+  // Currency
   ['€', '&euro;'],
   ['£', '&pound;'],
   ['¥', '&yen;'],
+  ['¢', '&cent;'],
+  // Fractions
+  ['½', '&frac12;'],
+  ['¼', '&frac14;'],
+  ['¾', '&frac34;'],
+  // Math & Logic
+  ['×', '&times;'],
+  ['÷', '&divide;'],
+  ['±', '&plusmn;'],
+  ['∞', '&infin;'],
+  ['≠', '&ne;'],
+  ['≈', '&asymp;'],
+  ['≤', '&le;'],
+  ['≥', '&ge;'],
+  // Arrows
+  ['←', '&larr;'],
+  ['→', '&rarr;'],
+  ['↑', '&uarr;'],
+  ['↓', '&darr;'],
 ]);
 
 /**
