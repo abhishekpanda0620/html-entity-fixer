@@ -51,27 +51,23 @@ export function escapeHtml(content: string, mode: EscapeMode = 'essential'): Esc
   const processedParts = parts.map((part, index) => {
     // Check if this part is a potential HTML tag (odd indices)
     if (index % 2 === 1) {
-        // Special Handling for Comments, CDATA, Doctype, PI
-        if (part.startsWith('<!') || part.startsWith('<?')) {
-            return part;
-        }
+      // Special Handling for Comments, CDATA, Doctype, PI
+      if (part.startsWith('<!') || part.startsWith('<?')) {
+        return part;
+      }
 
       // Validate if it is a REAL tag
       // Extract tag name (assuming standard format like <tag ...> or </tag>)
       const tagNameMatch = part.match(/^<\/?([a-zA-Z0-9-]+)/);
       if (tagNameMatch) {
         const tagName = tagNameMatch[1];
-        
+
         // 1. Valid HTML/SVG/MathML tag
         // 2. Custom Element (hyphenated)
         // 3. React Component (PascalCase)
         // 4. XML tag with matching closing tag elsewhere in document
         // 5. Self-closing tag (ends with />)
-        if (
-            isValidTag(tagName) || 
-            validClosingTags.has(tagName) ||
-            part.trim().endsWith('/>')
-        ) {
+        if (isValidTag(tagName) || validClosingTags.has(tagName) || part.trim().endsWith('/>')) {
           return part; // Return valid tag/comment unchanged
         }
       }
